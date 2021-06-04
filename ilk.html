@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Five favorite place</title>
+	<meta charset="utf-8">
+	<meta name="description" content="most five populer place in Ankara">
+	<meta name="keywords" content="ankara, anıtkabir,gezilecek,turistik">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1254"> 
+	<link rel="icon" href="f.ico" type="image/x-icon">
+<style type="text/css">
+	#body{
+margin: auto;
+         line-height:30px;
+        background-image:url('jj.jpg');
+     background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+     
+
+height: 6000px;
+
+	}
+	
+	#theDiv{
+	
+		color: #000000;
+		position: absolute;
+
+      margin-left: 500px;
+      margin-top: 100px;
+	}
+	#p{
+		font-size: 20px;
+		text-align: 40px;
+		margin-left: 500px;
+		margin-top: 170px;
+		width: 1200px;
+
+	}
+	
+#anıt{
+	width: 300px;
+	height: 300px;
+	
+	margin-left: 350px;
+}
+#hamam{
+	width: 300px;
+	height: 300px;
+	margin-top: 250px;
+	margin-left: 250px;
+}
+#kugu{
+	width: 300px;
+	height: 300px;
+	margin-top: 250px;
+	margin-left: 250px;
+}
+#eymir{
+	width: 300px;
+	height: 300px;
+	margin-top: 200px;
+	margin-left: 550px;
+}
+#ulu{
+	width: 300px;
+	height: 300px;
+	margin-top: 200px;
+	margin-left: 350px;
+}
+#contact{
+	width: 300px;
+	height: 300px;
+	margin-top: 200px;
+	margin-left: 850px;
+}
+#onlyJSyc{
+display: none;
+position: fixed;
+bottom: 100px;
+right: 100px;
+z-index: 9999;
+border: none;
+outline: none;
+background: url(http://4.bp.blogspot.com/-b50XKMWz84U/W9RouwhqVII/AAAAAAAAR_U/qQFXBOiUuQUC9Rv_evE4S7P9_yZ1YzZDgCK4BGAYYCw/s1600/yukari.png) no-repeat;
+cursor: pointer;
+padding: 0px;
+width: 100px;
+height: 100px;
+}
+mark{
+	background-color: #F0E68C;
+}
+
+</style>
+</head>
+<body id="body" onload="sallan(0)">
+	<?php
+	$khost = "localhost";
+	$kusername = "root";
+	$kpass = "";
+	$kname = "yorum";
+
+	$connect = mysqli_connect($khost,$kusername,$kpass,$kname);
+	
+
+	?>
+	 <script  language="JavaScript"> var theText = "The 5 most beautiful places to visit in Ankara"; 
+ function nextSize(i,incMethod,textLength) { 
+ 	if (incMethod == 1) 
+ 		return (75*Math.abs( Math.sin(i/(textLength/3.14))) ); 
+ 	if (incMethod == 2) 
+ 		return (400*Math.abs( Math.cos(i/(textLength/3.14)))); } 
+ 	function sizeCycle(text,method,dis) { output = ""; 
+ 	for (i = 0; i < text.length; i++) { size = parseInt(nextSize(i +dis,method,text.length)); output += "<font style='font-size: "+ size +"pt'>" +text.substring(i,i+1)+ "</font>"; } theDiv.innerHTML = output; } 
+ 		function sallan(n) { 
+ 			sizeCycle(theText,1,n); if (n > theText.length) {n=0} 
+ setTimeout("sallan(" + (n+1) + ")", 50); } 
+</script> <br><br>
+<div ID="theDiv" align="center">
+  </div> 
+  <article>
+  <p id="p"> <mark >
+  	I came to Ankara, where should I go? <br> What are the five most beautiful places I should see in Ankara? <br> Before answering these two questions, what is Ankara? I think let's answer the question. Ankara is the capital city of Turkey and the second most populous city. Its population is 5,663,322 as of 2020. Our beautiful Ankara, which is very cold in winters and hot in summers, has wonderful places to visit and see. We have selected five must-see places for everyone. We had a hard time choosing it because every part of Ankara is worth seeing :) </mark>
+  </p> </article>
+	 <ul>
+                    <li><a  href="anıtkabir.html" href="anıtkabir.html" > <img title="ANITKABIR" id=anıt src="anitkabir.jpg"> </a> 
+                    	<a href="hamamonu.html"> <img title="HAMAMONU" id="hamam" src="hamamonu.png"></a>
+                    	<a href="kugulu.html"><img title="KUGULU PARK" id="kugu" src="kugulu.png"></a>
+                    </li>  <br>
+                    <li> <a  href="eymir.html"  > <img title="LAKE OF EYMIR" id="eymir" src="eymir.png"> </a>
+                     <a href="ulucanlar.html">	<img title="ULUCANLAR PRISON MUSEUM" id="ulu" src="ulucanlar.png"> </a>
+                       </li> 
+                   <li>  <a  href="iletisim.html"> <img title="CONTACT WİTH US" id="contact" src="images.jpg"></a> </li>
+                      
+                     
+                       </ul>  <br>
+
+<button onclick="topFunction()" id="onlyJSyc"></button>
+<script>
+window.onscroll = function() {
+scrollFunction()
+};
+function scrollFunction() {
+if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500)
+document.getElementById("onlyJSyc").style.display = "block"
+else
+document.getElementById("onlyJSyc").style.display = "none"
+}
+function topFunction() {
+if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+document.body.scrollTop -= 40
+document.documentElement.scrollTop -= 40
+setTimeout(function() {
+topFunction()
+}, 0)
+} else {
+document.body.scrollTop = 0
+document.documentElement.scrollTop = 0
+}
+}
+</script>
+</body>
+</html>
